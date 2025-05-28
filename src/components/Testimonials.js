@@ -9,7 +9,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: `I recently hosted my sister-in-law's graduation party at this event center, and it was an amazing experience. The space was beautiful and fully utilized for our needs. They provided chairs and tables, which was a great convenience. Francis was incredibly accommodating, allowing us early access and being very easy to work with. I would definitely consider hosting another event here in the future. Thanks again`,
+    text: `I recently hosted my sister-in-law&rsquo;s graduation party at this event center, and it was an amazing experience. The space was beautiful and fully utilized for our needs. They provided chairs and tables, which was a great convenience. Francis was incredibly accommodating, allowing us early access and being very easy to work with. I would definitely consider hosting another event here in the future. Thanks again`,
     author: "Kayla Kudratt"
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
     author: "Latoya White"
   },
   {
-    text: `Amazing experience! The owner was very professional & prompt. He answered any & all questions I had. I had to switch venues within a week of my event, due to a very poor experience with another venue. Crazy enough Farjana Events had availability & I realized I should've been with them the entire time. Literally met all of my expectations in a week's time frame! I'm big on communication and they communicated! They were so professional & accommodating!`,
+    text: `Amazing experience! The owner was very professional &amp; prompt. He answered any &amp; all questions I had. I had to switch venues within a week of my event, due to a very poor experience with another venue. Crazy enough Farjana Events had availability &amp; I realized I should&rsquo;ve been with them the entire time. Literally met all of my expectations in a week&rsquo;s time frame! I&rsquo;m big on communication and they communicated! They were so professional &amp; accommodating!`,
     author: "John D.",
     rating: 5,
   }
