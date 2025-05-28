@@ -58,7 +58,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="/party3.jpg"
+            src="/team.jpg"
             alt="About Farjana Events"
             fill
             className="object-cover object-center"
@@ -91,13 +91,13 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p className="whitespace-pre-line">
-                Our mission is to create extraordinary moments that bring people together—whether for life's most cherished milestones or to uplift and empower our community.
+                Our mission is to create extraordinary moments that bring people together&mdash;whether for life&apos;s most cherished milestones or to uplift and empower our community.
 
                 We are more than an event space; we are a hub for connection, celebration, and service. Through our commitment to excellence, innovation, and care, we provide a luxurious yet welcoming environment where every detail is designed to inspire joy and create lasting memories.
 
                 Guided by a heart for service, we strive to make a difference by hosting events that unite and strengthen the vibrant community we call home.
 
-                At Farjana Events, we believe that every gathering—big or small—has the power to transform lives, and we are honored to be part of those moments.
+                At Farjana Events, we believe that every gathering&mdash;big or small&mdash;has the power to transform lives, and we are honored to be part of those moments.
               </p>
             </motion.div>
             <motion.div 

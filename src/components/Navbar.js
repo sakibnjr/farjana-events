@@ -2,6 +2,7 @@
 
 import { Phone, Mail, MapPin, Instagram, Facebook, Music2, Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import Image from 'next/image'
 
 const navLinks = [
   { name: 'Home', active: true },
@@ -23,7 +24,14 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex items-center justify-between h-20 px-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-           <img src="/logo.png" alt="" className='w-20' />
+            <Image 
+              src="/logo.png" 
+              alt="Farjana Events Logo" 
+              width={80}
+              height={80}
+              className='w-20'
+              priority
+            />
           </div>
 
           {/* Mobile Menu Button */}

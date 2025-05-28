@@ -89,7 +89,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Discover Farjana Events, Lawrenceville's premier event space offering modern, upscale rentals for micro-weddings, private celebrations, and corporate events. Our all-inclusive packages, customizable themes, and on-demand vendor access make us a one-stop shop for creating unforgettable moments.
+          Discover Farjana Events, Lawrenceville&apos;s premier event space offering modern, upscale rentals for micro-weddings, private celebrations, and corporate events. Our all-inclusive packages, customizable themes, and on-demand vendor access make us a one-stop shop for creating unforgettable moments.
         </motion.p>
 
         {/* Centered pill navigation */}
