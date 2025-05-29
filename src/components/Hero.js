@@ -78,7 +78,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{ lineHeight: "1.1" }}
         >
-          Creating The perfect and making Your special Occasion Unforgettable
+          Creating The <br /> perfect and making <br /> Your special Occasion
+          Unforgettable
         </motion.h1>
         <motion.p
           className="text-white/90 text-md mb-12 max-w-2xl text-center leading-relaxed"
