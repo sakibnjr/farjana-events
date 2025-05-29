@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Farjana Events",
+  title: "Faraja Events",
   description: "An event management company",
 };
 

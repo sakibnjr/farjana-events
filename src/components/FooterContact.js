@@ -1,23 +1,23 @@
-'use client'
+"use client";
 
-import { Mail, MapPin, Phone } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { Mail, MapPin, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/#about' },
-  { name: 'Pricing', href: '/#pricing' },
-  { name: 'Packages', href: '/#packages' },
-  { name: 'Contact Us', href: '/#contact' },
-  { name: 'EVENTS', href: '/events' },
-  { name: 'Blog', href: '/blog' },
-]
+  { name: "Home", href: "/" },
+  { name: "About", href: "/#about" },
+  { name: "Pricing", href: "/#pricing" },
+  { name: "Packages", href: "/#packages" },
+  { name: "Contact Us", href: "/#contact" },
+  { name: "EVENTS", href: "/events" },
+  { name: "Blog", href: "/blog" },
+];
 
 const FooterContact = () => {
   return (
     <footer className="w-full bg-black text-white">
       {/* Google Map Embed */}
-      <motion.div 
+      <motion.div
         className="w-full h-[400px]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -40,14 +40,14 @@ const FooterContact = () => {
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           {/* Left: Contact Info */}
-          <motion.div 
+          <motion.div
             className="md:col-span-4"
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <motion.h2 
+            <motion.h2
               className="font-pinyon text-6xl mb-12"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -56,45 +56,46 @@ const FooterContact = () => {
             >
               Contact Us
             </motion.h2>
-            <motion.div 
+            <motion.div
               className="space-y-6"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.4 }}
             >
-              <motion.div 
+              <motion.div
                 className="flex items-start gap-4"
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
                 <MapPin className="w-6 h-6 mt-1" />
                 <div className="text-lg">
-                  1685 Old Norcross Rd Ste 600A<br />
+                  1685 Old Norcross Rd Ste 600A
+                  <br />
                   Lawrenceville GA 30046
                 </div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="flex items-center gap-4"
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
                 <Mail className="w-6 h-6" />
-                <div className="text-lg">Booking@farjanaevents.com</div>
+                <div className="text-lg">Booking@farajaevents.com</div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="flex items-center gap-4"
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
                 <Phone className="w-6 h-6" />
-                <div className="text-lg">470-549-4746</div>
+                <div className="text-lg">+44 7487 414961</div>
               </motion.div>
             </motion.div>
           </motion.div>
 
           {/* Center: Nav Links */}
-          <motion.div 
+          <motion.div
             className="md:col-span-3"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -107,9 +108,9 @@ const FooterContact = () => {
                   key={link.name}
                   href={link.href}
                   className={`block text-lg hover:text-gray-300 transition-colors ${
-                    link.name === 'Home' || link.name === 'Packages' 
-                      ? 'bg-white text-black px-8 py-2 rounded-full hover:bg-gray-100 hover:text-black'
-                      : ''
+                    link.name === "Home" || link.name === "Packages"
+                      ? "bg-white text-black px-8 py-2 rounded-full hover:bg-gray-100 hover:text-black"
+                      : ""
                   }`}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -124,19 +125,19 @@ const FooterContact = () => {
           </motion.div>
 
           {/* Right: Subscribe Form */}
-          <motion.div 
+          <motion.div
             className="md:col-span-5"
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <motion.div 
+            <motion.div
               className="bg-black border border-white/20 rounded-3xl p-8"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
-              <motion.h3 
+              <motion.h3
                 className="text-2xl font-medium mb-8"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -145,8 +146,8 @@ const FooterContact = () => {
               >
                 SUBSCRIBE TO OUR MAILING LIST
               </motion.h3>
-              
-              <motion.form 
+
+              <motion.form
                 className="space-y-6"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -154,12 +155,12 @@ const FooterContact = () => {
                 transition={{ duration: 0.4, delay: 0.4 }}
               >
                 <div className="grid grid-cols-2 gap-4">
-                  <motion.div 
+                  <motion.div
                     className="relative"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <input 
+                    <input
                       type="text"
                       required
                       placeholder="First name *"
@@ -169,12 +170,12 @@ const FooterContact = () => {
                       First name *
                     </label>
                   </motion.div>
-                  <motion.div 
+                  <motion.div
                     className="relative"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <input 
+                    <input
                       type="text"
                       required
                       placeholder="Last name *"
@@ -186,12 +187,12 @@ const FooterContact = () => {
                   </motion.div>
                 </div>
 
-                <motion.div 
+                <motion.div
                   className="relative"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <input 
+                  <input
                     type="email"
                     required
                     placeholder="Email *"
@@ -202,12 +203,12 @@ const FooterContact = () => {
                   </label>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="relative"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <input 
+                  <input
                     type="tel"
                     required
                     placeholder="Phone *"
@@ -218,13 +219,13 @@ const FooterContact = () => {
                   </label>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="flex items-center gap-3"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <input 
-                    type="checkbox" 
+                  <input
+                    type="checkbox"
                     id="newsletter"
                     className="w-4 h-4 rounded-sm accent-white"
                   />
@@ -233,7 +234,7 @@ const FooterContact = () => {
                   </label>
                 </motion.div>
 
-                <motion.button 
+                <motion.button
                   type="submit"
                   className="w-full bg-gray-200 text-black rounded-full py-3 font-medium hover:bg-white transition-colors"
                   whileHover={{ scale: 1.05 }}
@@ -248,7 +249,7 @@ const FooterContact = () => {
       </div>
 
       {/* Copyright */}
-      <motion.div 
+      <motion.div
         className="border-t border-white/10"
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -256,11 +257,11 @@ const FooterContact = () => {
         transition={{ duration: 0.4 }}
       >
         <div className="max-w-7xl mx-auto px-6 py-6 text-center">
-          © {new Date().getFullYear()} by Farjana Events. All rights reserved.
+          © {new Date().getFullYear()} by Faraja Events. All rights reserved.
         </div>
       </motion.div>
     </footer>
-  )
-}
+  );
+};
 
-export default FooterContact; 
+export default FooterContact;
