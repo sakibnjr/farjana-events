@@ -1,35 +1,35 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 const services = [
   {
-    title: 'BIRTHDAY PARTIES',
-    desc: 'Make your birthday unforgettable with a vibrant and personalized celebration at our event space',
-    img: '/birthday.jpg',
+    title: "BIRTHDAY PARTIES",
+    desc: "Make your birthday unforgettable with a vibrant and personalized celebration at our event space",
+    img: "/birthday.jpg",
   },
   {
-    title: 'BABY SHOWERS',
-    desc: 'Celebrate the joy of new beginnings in a charming and cozy setting perfect for your baby shower.',
-    img: '/baby.jpg',
+    title: "BABY SHOWERS",
+    desc: "Celebrate the joy of new beginnings in a charming and cozy setting perfect for your baby shower.",
+    img: "/baby.jpg",
   },
   {
-    title: 'CORPORATE EVENTS',
-    desc: 'Host your corporate events with style and sophistication in a professional and versatile environment.',
-    img: '/party20.jpg',
+    title: "CORPORATE EVENTS",
+    desc: "Host your corporate events with style and sophistication in a professional and versatile environment.",
+    img: "/party20.jpg",
   },
   {
-    title: 'ANNIVERSARY CELEBRATION',
-    desc: 'Cherish your milestone moments with an elegant and romantic anniversary celebration.',
-    img: '/party14.jpg',
+    title: "ANNIVERSARY CELEBRATION",
+    desc: "Cherish your milestone moments with an elegant and romantic anniversary celebration.",
+    img: "/party14.jpg",
   },
   {
-    title: 'INTIMATE WEDDINGS',
-    desc: 'Say \'I do\' in an intimate, beautifully decorated venue designed for your special day.',
-    img: '/party19.jpg',
+    title: "INTIMATE WEDDINGS",
+    desc: "Say 'I do' in an intimate, beautifully decorated venue designed for your special day.",
+    img: "/party19.jpg",
   },
   {
-    title: 'SPECIAL OCASSIONS',
-    desc: 'Create lasting memories for any special occasion with our customizable and inviting event space.',
-    img: '/party22.jpg',
+    title: "SPECIAL OCASSIONS",
+    desc: "Create lasting memories for any special occasion with our customizable and inviting event space.",
+    img: "/party22.jpg",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function Services() {
                     {service.desc}
                   </p>
                   <button className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-white/90 transition-colors">
-                    Learn More
+                    Click Here
                   </button>
                 </div>
               </div>
@@ -76,4 +76,4 @@ export default function Services() {
       </div>
     </section>
   );
-} 
+}
