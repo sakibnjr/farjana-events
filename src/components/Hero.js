@@ -91,11 +91,11 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <ul className="flex items-center space-x-6 xl:space-x-10">
+          <ul className="flex items-center space-x-8 xl:space-x-10">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <button
-                  className={`font-bold px-3 py-2 text-sm xl:text-base transition-all duration-200 hover:text-gray-300 ${
+                  className={`font-bold px-4 py-2 text-sm xl:text-base transition-all duration-200 hover:text-gray-300 ${
                     link.active ? "border-2 rounded-full border-white" : ""
                   }`}
                   onClick={() => {
