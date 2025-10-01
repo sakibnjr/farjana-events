@@ -1,60 +1,72 @@
-'use client'
+"use client";
 
-import { Phone, Mail, MapPin, Instagram, Facebook, Music2, Menu, X } from 'lucide-react'
-import { useState } from 'react'
-import Image from 'next/image'
+import Image from "next/image";
+import { useState } from "react";
 
 const navLinks = [
-  { name: 'Home', active: true },
-  { name: 'About' },
-  { name: 'Pricing' },
-  { name: 'Packages' },
-  { name: 'Contact Us' },
-  { name: 'EVENTS' },
-  { name: 'Blog' },
-]
+  { name: "Home", active: true },
+  { name: "About Us" },
+  { name: "Gallery" },
+  { name: "Packages" },
+  { name: "Contact Us" },
+];
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleNavClick = (linkName) => {
+    setIsMenuOpen(false); // Close mobile menu
+
+    // Small delay to allow mobile menu to close before scrolling
+    setTimeout(() => {
+      if (linkName === "Home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (linkName === "About Us") {
+        scrollToSection("about");
+      } else if (linkName === "Gallery") {
+        scrollToSection("gallery");
+      } else if (linkName === "Packages") {
+        scrollToSection("services");
+      } else if (linkName === "Contact Us") {
+        scrollToSection("contact");
+      }
+    }, 100);
+  };
 
   return (
-    <header className="w-full">
-      {/* Top Navbar */}
-      <nav className="w-full bg-black text-white">
-        <div className="max-w-7xl mx-auto flex items-center justify-between h-20 px-4">
+    <header className="w-full bg-black text-white">
+      <nav className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between md:py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <Image 
-              src="/logo.png" 
-              alt="Farjana Events Logo" 
+          <div className="flex-shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Logo"
               width={80}
               height={80}
-              className='w-20'
-              priority
+              className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
             />
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
-
-          {/* Desktop Nav Links */}
-          <ul className="hidden md:flex items-center space-x-1 lg:space-x-2 mx-4">
+          {/* Desktop Navigation */}
+          <ul className="hidden lg:flex items-center space-x-8 xl:space-x-10">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <button
-                  className={`px-3 py-1.5 rounded-full font-bold text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/40 ${
-                    link.active
-                      ? 'border border-white text-white bg-black'
-                      : 'text-white hover:bg-white/10'
+                  onClick={() => handleNavClick(link.name)}
+                  className={`font-bold px-4 py-2 text-sm xl:text-base transition-all duration-200 hover:text-gray-300 ${
+                    link.active ? "border-2 rounded-full border-white" : ""
                   }`}
                 >
                   {link.name}
@@ -64,62 +76,94 @@ export default function Navbar() {
           </ul>
 
           {/* Desktop CTA Button */}
-          <div className="hidden md:flex items-center">
-            <button className="border border-white text-white px-4 py-1.5 rounded-full font-semibold hover:bg-white hover:text-black transition-colors text-sm">
-              SCHEDULE A TOUR
+          <div className="hidden lg:block">
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="uppercase rounded-full italic border border-white px-4 py-2 text-sm xl:text-base hover:bg-white hover:text-black transition-all duration-200"
+            >
+              Get a free quote
             </button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden flex flex-col items-center justify-center w-10 h-10 space-y-1 relative"
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 absolute ${
+                isMenuOpen ? "rotate-45" : "-translate-y-1"
+              }`}
+            ></span>
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMenuOpen ? "opacity-0" : ""
+              }`}
+            ></span>
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 absolute ${
+                isMenuOpen ? "-rotate-45" : "translate-y-1"
+              }`}
+            ></span>
+          </button>
         </div>
 
-        {/* Mobile Menu */}
-        <div
-          className={`md:hidden ${
-            isMobileMenuOpen ? 'block' : 'hidden'
-          } bg-black border-t border-white/10`}
-        >
-          <div className="px-4 py-3 space-y-2">
-            {navLinks.map((link) => (
+        {/* Mobile Navigation Menu - Full Screen Overlay */}
+        {isMenuOpen && (
+          <div className="lg:hidden fixed inset-0 w-full h-full bg-black z-50 flex flex-col">
+            {/* Header with Logo and Close Button */}
+            <div className="flex items-center justify-between px-4 py-4 border-b border-gray-700">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={80}
+                height={80}
+                className="w-16 h-16"
+              />
               <button
-                key={link.name}
-                className={`w-full text-left px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
-                  link.active
-                    ? 'bg-white/10 text-white'
-                    : 'text-white/80 hover:bg-white/10'
-                }`}
+                onClick={toggleMenu}
+                className="flex flex-col items-center justify-center w-10 h-10 relative"
+                aria-label="Close menu"
               >
-                {link.name}
+                <span className="w-6 h-0.5 bg-white rotate-45 absolute"></span>
+                <span className="w-6 h-0.5 bg-white opacity-0"></span>
+                <span className="w-6 h-0.5 bg-white -rotate-45 absolute"></span>
               </button>
-            ))}
-            <button className="w-full border border-white text-white px-4 py-2 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors text-sm mt-4">
-              SCHEDULE A TOUR
-            </button>
-          </div>
-        </div>
-      </nav>
+            </div>
 
-      {/* Social/Contact Icons Row */}
-      <div className="w-full bg-black text-white border-t border-white/10 pt-8 pb-2 ">
-        <div className="max-w-7xl mx-auto flex items-center justify-end space-x-6 py-2 px-4">
-          <a href="#" className="hover:text-purple-300" title="Call">
-            <Phone className="w-4 h-4 md:w-5 md:h-5" />
-          </a>
-          <a href="#" className="hover:text-purple-300" title="Email">
-            <Mail className="w-4 h-4 md:w-5 md:h-5" />
-          </a>
-          <a href="#" className="hover:text-purple-300" title="Location">
-            <MapPin className="w-4 h-4 md:w-5 md:h-5" />
-          </a>
-          <a href="#" className="hover:text-purple-300" title="Instagram">
-            <Instagram className="w-4 h-4 md:w-5 md:h-5" />
-          </a>
-          <a href="#" className="hover:text-purple-300" title="Facebook">
-            <Facebook className="w-4 h-4 md:w-5 md:h-5" />
-          </a>
-          <a href="#" className="hover:text-purple-300" title="TikTok">
-            <Music2 className="w-4 h-4 md:w-5 md:h-5" />
-          </a>
-        </div>
-      </div>
+            {/* Navigation Links */}
+            <div className="flex-1 flex flex-col justify-center px-8">
+              <ul className="space-y-8">
+                {navLinks.map((link) => (
+                  <li key={link.name}>
+                    <button
+                      className={`block w-full text-left font-bold text-2xl py-4 transition-all duration-200 hover:text-gray-300 ${
+                        link.active
+                          ? "text-white border-l-4 border-white pl-4"
+                          : "text-white"
+                      }`}
+                      onClick={() => handleNavClick(link.name)}
+                    >
+                      {link.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Mobile CTA Button */}
+              <div className="mt-12">
+                <button
+                  className="w-full uppercase rounded-full italic border-2 border-white px-6 py-4 text-lg font-bold hover:bg-white hover:text-black transition-all duration-200"
+                  onClick={() => handleNavClick("Contact Us")}
+                >
+                  Get a free quote
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </nav>
     </header>
-  )
-} 
+  );
+}
