@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Heading from "./Heading";
 
 const offers = [
   {
@@ -16,26 +17,26 @@ const offers = [
 
 const WhatWeOffer = () => {
   return (
-    <section className="w-full bg-black py-12">
+    <section className="w-full bg-black py-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center px-4 gap-8">
-        {/* Vertical Heading */}
+        {/* Heading */}
         <motion.div
-          className="flex flex-col items-center md:items-end md:justify-center w-full md:w-auto mb-8 md:mb-0"
+          className="flex flex-row justify-center w-full md:w-auto mb-8 gap-1 md:gap-2 relative"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <motion.h2
-            className="hidden md:block text-white text-4xl md:text-5xl font-light tracking-tight"
-            style={{ writingMode: "vertical-lr", textOrientation: "mixed" }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            WHAT <span className="font-pinyon">WE</span> OFFER
-          </motion.h2>
+          <Heading
+            text={"What We"}
+            border={false}
+            className="text-white md:rotate-[-90deg] text-[8vw] md:text-[6vw] lg:text-[5vw] leading-none whitespace-nowrap"
+          />
+          <Heading
+            text={"offer"}
+            border={false}
+            className="text-white md:rotate-[-90deg] text-[8vw] md:text-[6vw] lg:text-[5vw] md:absolute left-16 md:left-28 lg:left-36"
+          />
         </motion.div>
         {/* Offer Cards */}
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8 w-full">

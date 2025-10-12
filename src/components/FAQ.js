@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Heading from "./Heading";
 
 const faqData = [
   {
@@ -56,9 +57,7 @@ const FAQ = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-5xl sm:text-6xl md:text-7xl text-black mb-4 tracking-tigh font-pinyon">
-            Frequently Asked Questions
-          </h2>
+          <Heading text="Frequently Asked Questions" border={false} />
         </motion.div>
 
         {/* FAQ Items */}

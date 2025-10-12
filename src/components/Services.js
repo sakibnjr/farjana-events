@@ -2,88 +2,85 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Utensils, Heart, TreePine, Palette } from "lucide-react";
+import { Utensils, Heart, Palette } from "lucide-react";
+import { BsBalloon } from "react-icons/bs";
+
+import Heading from "./Heading";
 
 const services = [
   {
-    title: "TABLESTYLING",
+    title: "TABLE STYLING",
     desc: "Host your event with sophistication and a beautifully decorated table for your special day.",
-    img: "/party14.jpg",
+    img: "/tablestyling.jpg",
     icon: Utensils,
     detailedInfo: {
       description:
         "Table styling is about all about choosing the right theme and colours to create the right atmosphere best suited for your occasion. We are passionate about making memories around the table and would love to create the perfect look to elevate your special occasion. Please enquire with us directly to discuss your needs and we will do our best to accommodate you.",
       included: [
-        "Themed Centrepiece arrangements for tables",
+        "Centrepiece arrangements for tables",
         "Tablecloths",
         "Plates",
         "Cutlery",
         "Champagne glasses",
-        "Charger Plates with napkins for a Touch of Elegance",
-        "Chair covers",
+        "Charger Plates with napkins",
       ],
       addOns: [
-        "Drinks table arrangement- (Drinks are not included)",
-        "Buffet table arrangement (Food is not included)",
-        "Custom Welcome Sign",
+        "Drinks table arrangement with display stands- (Drinks are not included)",
         "Drinks Ladder",
+        "Buffet table arrangement with display stands- (Food is not included)",
+        "Custom Welcome Sign",
       ],
     },
   },
   {
     title: "DATE NIGHT",
-    desc: "Spend an intimate evening with your loved one with a romantic set up designed for your special occasions. If you're a date night kind of couple, these are the perfect settings for creating a special evening together.",
-    img: "/party19.jpg",
+    desc: "Spend an intimate evening with your loved one with a romantic set up designed for your special occasion. We have the perfect settings for creating a special evening.",
+    img: "/DOMEE.jpg",
     icon: Heart,
     detailedInfo: {
       description:
-        "Make your special day unforgettable and celebrate in style with one of our date night packages. Whether you are planning a romantic dinner, celebrating your anniversary or want to have a date night. Our packages are perfect for creating a beautiful romantic evening. This is a must-have fun date night activity set. Capture that amazing moment your loved one gets to see the incredible painting that their beloved partner, friend or family has painted.",
+        "Make your special day unforgettable and celebrate in style with one of our date night packages. Whether you are planning a romantic dinner or celebrating your anniversary, Our packages are perfect for creating a beautiful romantic evening. Create, laugh & make beautiful memories.",
       packages: [
         {
           name: "Romantic Table",
           price: "From £125",
           items: [
-            "2 x Gold Charger Plates",
-            "2 x Black Napkins",
-            "2 x Romantic Red Candle Holders & Candles",
-            "2 x Glass Taper Candlestick Holders",
-            "2 x Cherry Red Taper Candles",
-            "1 x Organza bag of Luxury Romantic Red Petals",
-            "1 x Set of Art Decor Champagne Flutes",
-            "1 x Love Style Guide, complete with Date Night Q&A and a romantic Spotify playlist",
-            "1 x Luxury Keepsake Box",
+            "2 x Charger Plates",
+            "2 x Napkins",
+            "2 x Candle Holders & Candles",
+            "2 x Champagne Flutes",
+            "1 x Couple Card Game",
+            "Rose petals",
+            "Artificial flowers",
+            "LED Candles",
+          ],
+        },
+        {
+          name: "Paint your Partner",
+          price: "From £135",
+          items: [
+            "2 x Easel Stands",
+            "2 x Paint Pallets",
+            "2 x Canvases",
+            "2 x Pencils",
+            "Paints",
+            "Paint Brushes",
+            "Couples cards",
+            "12 Date Nights a Year Activity Card – Keep the fun going all year long",
+            "Petals",
+            "LED Candles",
           ],
         },
         {
           name: "Romantic Room Decoration",
-          price: "From £150",
+          price: "From £160",
           items: [
-            "2 x Gold Charger Plates",
-            "LED candle decor",
-            "30x ceiling balloons",
-            "2 x Black Napkins",
-            "2 x Romantic Red Candle Holders & Candles",
-            "2 x Glass Taper Candlestick Holders",
-            "2 x Cherry Red Taper Candles",
-            "1 x Organza bag of Luxury Romantic Red Petals",
-            "1 x Set of Art Decor Champagne Flutes",
-            "1 x Love Style Guide, complete with Date Night Q&A and a romantic Spotify playlist",
-            "1 x Luxury Keepsake Box",
-          ],
-        },
-        {
-          name: "Paint your Partner Date Night",
-          price: "From £135",
-          items: [
-            "2 x Easle Stands",
-            "2 x Paint Pallets",
-            "2 x Canvases (9x12 inches)",
-            "2 x Sketching Pencils",
-            "Paints",
-            "Paint Brushes",
-            "Couples cards A Deck of Conversation Cards – Spark fun and meaningful discussions",
-            "Create, Laugh & Make Memories",
-            "12 Date Nights a Year Activity Card – Keep the fun going all year long",
+            "Balloons",
+            "Rose petals",
+            "LED Candles",
+            "Couples Cards",
+            "Artificial flowers",
+            "Fairy lights",
           ],
         },
       ],
@@ -93,12 +90,12 @@ const services = [
   },
   {
     title: "LUXURY PICNICS & KIDS PARTIES",
-    desc: "Experience bespoke indoor and outdoor picnics from romantic picnics to children's parties to unforgettable luxury picnics.",
-    img: "/party22.jpg",
-    icon: TreePine,
+    desc: "Experience bespoke indoor and outdoor picnics. From children's parties to romantic luxury picnics.",
+    img: "/paintparty.jpg",
+    icon: BsBalloon,
     detailedInfo: {
       description:
-        "Celebrate your special occasion with a beautifully styled picnic. We provide everything that makes the perfect picnic experience, from beautifully decorated picnic tables, cushions, blankets and champagne glasses. Make your child's birthday unforgettable with a beautifully themed picnic party, fun activities, and a stress-free experience for parents.",
+        "Celebrate your special occasion with a beautifully styled picnic. We provide everything that makes the perfect picnic experience.",
       perfectFor: [
         "Romantic Date Picnics",
         "Picnic Proposals",
@@ -108,66 +105,64 @@ const services = [
       ],
       packages: [
         {
-          name: "Romantic Picnic (2 to 4 guests)",
+          name: "Romantic Picnic",
           price: "From £150",
-          perfectFor: "Date nights, intimate gender reveals",
         },
         {
-          name: "Luxury Group Picnic (4-8 guests)",
+          name: "Group Picnic (4-8 guests)",
           price: "From £200",
-          perfectFor: "Bridal showers, reunions",
         },
         {
           name: "Large Event Picnic (10+ guests)",
           price: "Custom Pricing",
-          perfectFor: "Celebrations, baby showers",
         },
         {
-          name: "Mini Picnic Party (For Up to 6 Kids)",
+          name: "Mini Picnic Party (For Up to 6 Children)",
           price: "From £200",
-          perfectFor: "",
         },
         {
           name: "Deluxe Picnic Party (For 7-12 Kids)",
           price: "From £360",
-          perfectFor: "",
         },
         {
           name: "Large Picnic Party (12+ Kids)",
           price: "Custom Pricing",
-          perfectFor: "",
         },
       ],
-      included: [
-        "A beautifully styled setup: low table dining, cushions, full table decor",
+      luxuryPicnicIncluded: [
+        "Custom décor: personalised theme colours, flowers, candles",
+        "A beautifully styled setup: low table, cushions and full table decor",
         "Charger plates, dinner plates, glassware, cutlery",
         "Drinks trolley, ice bucket and speaker",
-        "Custom Décor: Personalised colour themes, flowers, candles",
+      ],
+      childrenPicnicIncluded: [
+        "Custom décor: personalised theme colours",
+        "A beautifully styled table setup: low table, cushions and full table décor",
+        "Plastic plates, cups and cutlery",
+        "Party bags",
       ],
       addOns: [
-        "Additional décor",
         "Balloons",
         "Bouncy castle",
-        "Party bags",
-        "Drinks/food arrangement",
+        "Drinks/food arrangement with display stands (Food and drinks is not included)",
       ],
     },
   },
   {
     title: "SIP AND EXPRESS",
     desc: "Thinking of hosting an event? Why not throw a sip and paint party? Invite your guests to explore their inner creativity, create their own masterpiece and enjoy a night full of fun.",
-    img: "/party20.jpg",
+    img: "/sip.jpg",
     icon: Palette,
     detailedInfo: {
       description:
         "Whether you're having a get-together with friends or celebrating for an occasion, we've got everything you need for your sip and paint party.",
       included: [
-        "Canvas: A blank canvas for you to create your masterpiece",
-        "Paints: Acrylic paints in a variety of colours",
-        "Brushes: A set of paintbrushes for applying the paint",
-        "Palettes: A palette for mixing colours",
-        "Aprons: Aprons to protect your clothes from paint splatters",
-        "Easel: An easel to hold the canvas",
+        "A blank canvas for you to create your masterpiece",
+        "Paints in a variety of colours",
+        "A set of paint brushes",
+        "Palettes",
+        "Aprons",
+        "Easel",
         "Drinking glasses",
       ],
       addOns: [],
@@ -200,15 +195,10 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-black mb-4 tracking-tight">
-              SERVICES
-              <span className="text-5xl sm:text-6xl md:text-7xl font-pinyon">
-                We Offer
-              </span>
-            </h2>
+            <Heading text="Services We Offer" border={false} />
             <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
-              Discover our range of premium event styling services designed to
-              make your special occasions unforgettable
+              Discover a range of our premium services. <br /> We can also
+              create your own package best suited to your needs.
             </p>
           </motion.div>
 
@@ -285,6 +275,7 @@ export default function Services() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
+          onClick={closeModal}
         >
           <motion.div
             className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-xl border border-gray-100"
@@ -292,6 +283,7 @@ export default function Services() {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.95, opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
             <motion.div
@@ -404,10 +396,7 @@ export default function Services() {
                     </h3>
                     <div className="space-y-4">
                       {selectedService.detailedInfo.packages.map((pkg, idx) => (
-                        <div
-                          key={idx}
-                          className="border border-gray-200 rounded-2xl p-6 hover:border-gray-300 transition-colors duration-200"
-                        >
+                        <div key={idx} className="">
                           <div className="flex justify-between items-center mb-3">
                             <h4 className="font-semibold text-gray-900 text-lg">
                               {pkg.name}
@@ -437,16 +426,58 @@ export default function Services() {
                         </div>
                       ))}
                     </div>
-                    {selectedService.title ===
-                      "LUXURY PICNICS & KIDS PARTIES" && (
-                      <p className="text-center text-gray-600 text-sm mt-6">
-                        Get in touch for a tailored quote and availability
-                      </p>
-                    )}
                   </motion.div>
                 )}
 
-                {selectedService.detailedInfo.included &&
+                {/* What's Included Section - Handle different service types */}
+                {selectedService.title === "LUXURY PICNICS & KIDS PARTIES" ? (
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.4, delay: 0.6 }}
+                  >
+                    {/* Luxury Picnic Inclusions */}
+                    <div className="mb-8">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
+                        What&apos;s Included in the Luxury Picnic?
+                      </h3>
+                      <div className="space-y-3 max-w-2xl mx-auto">
+                        {selectedService.detailedInfo.luxuryPicnicIncluded.map(
+                          (item, idx) => (
+                            <div
+                              key={idx}
+                              className="text-gray-600 text-sm flex items-start"
+                            >
+                              <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                              <span className="leading-relaxed">{item}</span>
+                            </div>
+                          )
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Children's Picnic Inclusions */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
+                        What&apos;s Included in the Children&apos;s Picnic?
+                      </h3>
+                      <div className="space-y-3 max-w-2xl mx-auto">
+                        {selectedService.detailedInfo.childrenPicnicIncluded.map(
+                          (item, idx) => (
+                            <div
+                              key={idx}
+                              className="text-gray-600 text-sm flex items-start"
+                            >
+                              <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                              <span className="leading-relaxed">{item}</span>
+                            </div>
+                          )
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
+                ) : (
+                  selectedService.detailedInfo.included &&
                   selectedService.detailedInfo.included.length > 0 && (
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
@@ -454,9 +485,9 @@ export default function Services() {
                       transition={{ duration: 0.4, delay: 0.6 }}
                     >
                       <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
-                        What&apos;s Included
+                        What&apos;s Included?
                       </h3>
-                      {selectedService.title === "TABLESTYLING" && (
+                      {selectedService.title === "TABLE STYLING" && (
                         <p className="text-center text-gray-600 text-sm mb-4">
                           Decor, Setup and Breakdown
                         </p>
@@ -475,7 +506,8 @@ export default function Services() {
                         )}
                       </div>
                     </motion.div>
-                  )}
+                  )
+                )}
 
                 {selectedService.detailedInfo.addOns &&
                   selectedService.detailedInfo.addOns.length > 0 && (

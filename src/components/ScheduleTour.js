@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Heading from "./Heading";
 
 const ScheduleTour = () => {
   return (
@@ -41,16 +42,6 @@ const ScheduleTour = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <motion.p
-              className="text-white/90 text-lg md:text-xl max-w-xl mb-8"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Experience our venue firsthand. Schedule a tour to see our
-              beautiful space and discuss your event needs with our team.
-            </motion.p>
             <motion.div
               className="flex flex-col gap-4"
               initial={{ y: 20, opacity: 0 }}
@@ -70,29 +61,28 @@ const ScheduleTour = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Call Us: +44 7487 414961
+                Call Us: +44 07487 414961
               </motion.button>
             </motion.div>
           </motion.div>
 
           {/* Right side - Title */}
           <motion.div
-            className="flex-1 flex justify-center md:justify-end"
+            className="flex-1 flex flex-col items-end"
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <motion.h2
-              className="text-white text-4xl md:text-5xl lg:text-6xl font-light text-center md:text-right font-pinyon"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              SCHEDULE A <br />
-              <span className="font-sans">TOUR</span>
-            </motion.h2>
+            <Heading
+              text={"Schedule a"}
+              border={false}
+              className="text-white"
+            />
+
+            <h2 className="text-white text-[80px] md:text-[100px] lg:text-[120px] font-cfont">
+              Tour
+            </h2>
           </motion.div>
         </div>
       </div>

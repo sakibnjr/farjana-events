@@ -2,6 +2,7 @@
 
 import { Mail, MapPin, Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import Heading from "./Heading";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -46,15 +47,7 @@ const FooterContact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <motion.h2
-              className="font-pinyon text-6xl mb-12"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-            >
-              Contact US
-            </motion.h2>
+            <Heading text="Contact Us" border={false} />
             <motion.div
               className="space-y-6"
               initial={{ y: 20, opacity: 0 }}
@@ -80,7 +73,7 @@ const FooterContact = () => {
                 transition={{ duration: 0.2 }}
               >
                 <Mail className="w-6 h-6" />
-                <div className="text-lg">booking@farajaevents.com</div>
+                <div className="text-lg">info@farajaevents.com</div>
               </motion.div>
               <motion.div
                 className="flex items-center gap-4"
@@ -88,7 +81,7 @@ const FooterContact = () => {
                 transition={{ duration: 0.2 }}
               >
                 <Phone className="w-6 h-6" />
-                <div className="text-lg">+44 7487 414961</div>
+                <div className="text-lg">+44 07487 414961</div>
               </motion.div>
             </motion.div>
           </motion.div>
