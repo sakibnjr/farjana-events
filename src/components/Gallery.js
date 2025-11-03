@@ -40,8 +40,8 @@ const Gallery = () => {
           transition={{ duration: 0.6 }}
         >
           <Heading text="Our Gallery" border={false} />
-          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
-            Take a look at some of our beautiful event setups and celebrations
+          <p className="text-lg md:text-xl max-w-2xl mx-auto">
+            Take a look at some of our beautiful setups and celebrations
           </p>
         </motion.div>
 

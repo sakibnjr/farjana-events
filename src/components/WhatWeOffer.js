@@ -7,11 +7,11 @@ import Heading from "./Heading";
 const offers = [
   {
     title: "LUXURY MOBILE BAR",
-    image: "/cup.jpg",
+    image: "/gallery/three.jpg",
   },
   {
     title: "EVENT SPACE RENTAL",
-    image: "/party5.jpg",
+    image: "/gallery/five.jpg",
   },
 ];
 

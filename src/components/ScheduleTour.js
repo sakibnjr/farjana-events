@@ -16,7 +16,7 @@ const ScheduleTour = () => {
         transition={{ duration: 0.8 }}
       >
         <Image
-          src="/party8.jpg"
+          src="/gallery/one.jpg"
           alt="Schedule Tour Background"
           fill
           className="object-cover"

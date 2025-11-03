@@ -15,14 +15,14 @@ const New = () => {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <motion.nav
-        className="flex items-center justify-between py-4 relative"
+        className="flex items-center justify-between relative py-4 md:py-0 my-0"
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        {/* Left: Logo */}
+        {/* Left: Logo - Hidden on mobile */}
         <motion.div
-          className="flex-shrink-0 z-20"
+          className="hidden md:block flex-shrink-0 z-20"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -31,22 +31,22 @@ const New = () => {
           <Image
             src="/logo.png"
             alt="Faraja Events"
-            width={120}
-            height={120}
-            className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+            width={110}
+            height={110}
+            className="size-auto"
           />
         </motion.div>
 
-        {/* Center: Brand Name - Hidden on mobile */}
+        {/* Brand Name - Left on mobile, Center on desktop */}
         <motion.div
-          className="absolute left-1/2 transform -translate-x-1/2 hidden md:block"
+          className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-20"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Link
             href="/"
-            className="font-bold text-2xl lg:text-4xl tracking-wider font-cfont hover:text-gray-700 transition-colors"
+            className="font-bold text-xl md:text-2xl lg:text-4xl tracking-wider font-cfont"
           >
             faraja events
           </Link>
@@ -118,25 +118,10 @@ const New = () => {
           animate={{ x: isMenuOpen ? 0 : "100%" }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <div className="flex flex-col items-center justify-center h-full space-y-8">
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{
-                scale: isMenuOpen ? 1 : 0,
-                opacity: isMenuOpen ? 1 : 0,
-              }}
-              transition={{ duration: 0.3, delay: isMenuOpen ? 0.2 : 0 }}
-            >
-              <Link
-                href="/"
-                className="font-bold text-3xl tracking-wider font-cfont mb-8"
-              >
-                faraja events
-              </Link>
-            </motion.div>
+          <div className="flex flex-col items-end justify-center h-full space-y-8 px-8">
             {[
               { href: "#", label: "Home" },
-              { href: "#about", label: "About Us" },
+              { href: "#about", label: "About" },
               { href: "#gallery", label: "Gallery" },
               { href: "#packages", label: "Packages" },
               { href: "#contact", label: "Contact Us" },
@@ -144,7 +129,7 @@ const New = () => {
               <motion.a
                 key={item.label}
                 href={item.href}
-                className="text-xl hover:text-gray-600 transition-colors"
+                className="text-2xl hover:text-gray-600 transition-colors text-right"
                 onClick={toggleMenu}
                 initial={{ x: 50, opacity: 0 }}
                 animate={{
@@ -153,9 +138,9 @@ const New = () => {
                 }}
                 transition={{
                   duration: 0.3,
-                  delay: isMenuOpen ? 0.3 + index * 0.1 : 0,
+                  delay: isMenuOpen ? 0.1 + index * 0.1 : 0,
                 }}
-                whileHover={{ scale: 1.1, x: 10 }}
+                whileHover={{ scale: 1.05, x: -10 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {item.label}
@@ -166,7 +151,7 @@ const New = () => {
       </motion.nav>
 
       <motion.section
-        className="flex flex-col items-center justify-center text-center gap-4 sm:gap-6 py-12 sm:py-16 lg:py-20 px-4"
+        className="flex flex-col items-center justify-center text-center gap-4 sm:gap-6 py-10 px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.8 }}
@@ -183,7 +168,7 @@ const New = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
         >
-          <Heading text="And" border={true} />
+          <Heading text="&" border={true} />
         </motion.div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -208,7 +193,7 @@ const New = () => {
         </motion.button>
 
         {/* hero section - table setup image */}
-        <div className="relative flex flex-col lg:flex-row w-full h-auto lg:h-[80vh] mt-8 sm:mt-12">
+        <div className="relative flex flex-col lg:flex-row w-full h-auto lg:h-[80vh]">
           {/* Left Section — Event Setup Image */}
           <div className="hidden lg:block w-full lg:w-[60%] h-[40vh] sm:h-[50vh] lg:h-full bg-white relative">
             <Image
@@ -292,7 +277,7 @@ const New = () => {
                       htmlFor="eventDetails"
                       className="block text-start text-xs sm:text-sm font-medium mb-1 text-white"
                     >
-                      Tell us more about this event
+                      Tell us more about your event
                     </label>
                     <textarea
                       id="eventDetails"
@@ -329,7 +314,7 @@ const New = () => {
 
         {/* welcome text */}
         <motion.div
-          className="mt-12 sm:mt-16 lg:mt-20"
+          className="mt-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -364,6 +349,7 @@ const New = () => {
             We ensure that your special occasion is unique, memorable, and
             exceptional. <br className="hidden sm:block" />
             <span className="sm:hidden"> </span>
+            <br />
             Please do not hesitate to contact us for more information.
           </motion.p>
           <motion.button
@@ -386,7 +372,7 @@ const New = () => {
       {/* About us */}
       <motion.section
         id="about"
-        className="w-full bg-[#ececec] mt-12 sm:mt-16 lg:mt-20"
+        className="w-full bg-[#ececec]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -441,18 +427,11 @@ const New = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <motion.button
-                  className="border-2 border-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold italic tracking-wide hover:bg-black hover:text-white transition-colors text-sm sm:text-base flex-1 sm:flex-none"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  READ MORE
-                </motion.button>
-                <motion.button
                   className="bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base lg:text-lg shadow hover:bg-gray-900 transition-colors flex-1 sm:flex-none"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Call Us: +44 07487 414961
+                  Call Us: +044 07487 414961
                 </motion.button>
               </motion.div>
             </div>

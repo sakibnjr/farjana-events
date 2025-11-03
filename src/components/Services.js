@@ -168,6 +168,119 @@ const services = [
       addOns: [],
     },
   },
+  {
+    title: "PROP HIRE",
+    desc: "We have a wide range of items available for hire to add the finishing touches to your special day. Please contact us for more information regarding your chosen theme.",
+    img: "/DOMEE.jpg",
+    icon: Heart,
+    detailedInfo: {
+      packages: [
+        {
+          name: "Luxury Dome Hire Only (Without Decorations)",
+          price: "From £150",
+        },
+        {
+          name: "Luxury Dome Hire Only (With Decorations)",
+          price: "From £350",
+        },
+        {
+          name: "Drinks Ladder (Including 27 champagne glasses)",
+          price: "From £60",
+        },
+        {
+          name: "9 Buffet Risers (Including champagne glasses)",
+          price: "From £75",
+        },
+      ],
+    },
+  },
+  {
+    title: "Pamper Us Too",
+    desc: "Thinking of throwing a party? Why not choose from one of our packages for the ultimate kid's pamper party?",
+    img: "/DOMEE.jpg",
+    icon: Heart,
+    detailedInfo: {
+      description:
+        "Our pamper parties are suitable for ages 5 plus and bring so much fun. We encourage self-affirmation and offer the best experience where every child is treated like a VIP and feels like royalty.We offer a wide range of luxurious spa treatments designed specifically for children. From mini manicures, pedicures & facials. We create an environment that allows children to unwind and enjoy their experience to the fullest.We also offer a variety of interactive activities and games designed to keep children entertained throughout the party.If you have something extra special in mind for your occasion let us know so we can add the finishing touches.We would love to hear from you and help you create unforgettable memories.For a quicker response, send us a message on WhatsApp.",
+      packages: [
+        {
+          name: "Luxury Spa Party-(minimum of 4 children)Suitable for 5 yrs+",
+          price: "From £180",
+          items: [
+            "Gentle facial",
+            "Mini manicure/pedicure",
+            "Dressing gown",
+            "Flip flops",
+            "Headband",
+            "Mini Mirror",
+            "Activities",
+            "Self-love affirmation cards",
+            "Party bags",
+            "Plastic champagne glasses",
+          ],
+        },
+        {
+          name: "VIP spa party-(Minium of 4 children) Sutitable for 6yr+",
+          price: "From £200",
+          items: [
+            "Gentle facial",
+            "Mini manicure/pedicure",
+            "Dressing gown",
+            "Flip flops",
+            "Headband",
+            "Mini Mirror",
+            "Activities",
+            "Self-love affirmation cards",
+            "Party bags",
+            "Foot Spa",
+            "Plastic champagne glasses",
+          ],
+        },
+        {
+          name: "Pamper & Craft Suitable for 6yr+",
+          price: "From £385",
+          items: [
+            "Foot Spa",
+            "Gentle facial",
+            "Mini manicure/pedicure",
+            "Dressing gowns & flip flops and headbands for each guest",
+            "Mini Mirror",
+            "Activities",
+            "Self-love affirmation cards",
+            "Blank canvas",
+            "Easel",
+            "Palettes",
+            "Aprons",
+            "Paint brush",
+            "Paint",
+          ],
+        },
+        {
+          name: "Pamper & Craft Suitable for 6yr+",
+          price: "From £470",
+          items: [
+            "Bouncy Castle - 12x12ft- We deliver to various locations across London and Essex",
+            "Foot Spa",
+            "Gentle facial",
+            "Mini manicure/pedicure",
+            "Dressing gown",
+            "Flip flops",
+            "Headband",
+            "Mini Mirror",
+            "Activities",
+            "Self-love affirmation cards",
+            "Karaoke machine",
+            "Party bags",
+            "Plastic champagne glasses",
+            "Palettes",
+            "Aprons",
+            "Paint brush",
+            "Paint",
+          ],
+        },
+      ],
+    },
+  },
 ];
 
 export default function Services() {
@@ -196,13 +309,14 @@ export default function Services() {
             transition={{ duration: 0.6 }}
           >
             <Heading text="Services We Offer" border={false} />
-            <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
-              Discover a range of our premium services. <br /> We can also
-              create your own package best suited to your needs.
+            <p className="text-lg md:text-xl max-w-2xl mx-auto">
+              Discover a range of our premium services. <br />
+              <span className="uppercase">We can also create in</span>
+              <br /> your own package best suited to your needs.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {services.map((service, idx) => (
               <motion.div
                 key={idx}

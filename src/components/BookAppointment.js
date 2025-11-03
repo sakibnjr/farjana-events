@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Heading from "./Heading";
 
 const BookAppointment = () => {
   return (
@@ -16,7 +15,7 @@ const BookAppointment = () => {
         transition={{ duration: 0.8 }}
       >
         <Image
-          src="/party3.jpg"
+          src="/gallery/two.jpg"
           alt="Book Appointment Background"
           fill
           className="object-cover"
