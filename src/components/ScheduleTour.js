@@ -61,7 +61,7 @@ const ScheduleTour = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Call Us: +44 07487 414961
+                Contact Us: +044 07487 414961
               </motion.button>
             </motion.div>
           </motion.div>

@@ -81,7 +81,7 @@ const FooterContact = () => {
                 transition={{ duration: 0.2 }}
               >
                 <Phone className="w-6 h-6" />
-                <div className="text-lg">+44 07487 414961</div>
+                <div className="text-lg">+044 07487 414961</div>
               </motion.div>
             </motion.div>
           </motion.div>

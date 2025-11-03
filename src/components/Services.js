@@ -169,39 +169,13 @@ const services = [
     },
   },
   {
-    title: "PROP HIRE",
-    desc: "We have a wide range of items available for hire to add the finishing touches to your special day. Please contact us for more information regarding your chosen theme.",
-    img: "/PROP.jpg",
-    icon: Heart,
-    detailedInfo: {
-      packages: [
-        {
-          name: "Luxury Dome Hire Only (Without Decorations)",
-          price: "From £150",
-        },
-        {
-          name: "Luxury Dome Hire Only (With Decorations)",
-          price: "From £350",
-        },
-        {
-          name: "Drinks Ladder (Including 27 champagne glasses)",
-          price: "From £60",
-        },
-        {
-          name: "9 Buffet Risers (Including champagne glasses)",
-          price: "From £75",
-        },
-      ],
-    },
-  },
-  {
     title: "Pamper Us Too",
     desc: "Thinking of throwing a party? Why not choose from one of our packages for the ultimate kid's pamper party?",
     img: "/PAMPER.jpg",
     icon: Heart,
     detailedInfo: {
       description:
-        "Our pamper parties are suitable for ages 5 plus and bring so much fun. We encourage self-affirmation and offer the best experience where every child is treated like a VIP and feels like royalty.We offer a wide range of luxurious spa treatments designed specifically for children. From mini manicures, pedicures & facials. We create an environment that allows children to unwind and enjoy their experience to the fullest.We also offer a variety of interactive activities and games designed to keep children entertained throughout the party.If you have something extra special in mind for your occasion let us know so we can add the finishing touches.We would love to hear from you and help you create unforgettable memories.For a quicker response, send us a message on WhatsApp.",
+        "Our pamper parties are suitable for ages 5 plus and bring so much fun. We encourage self-affirmation and offer the best experience where every child is treated like a VIP and feels like royalty.\n\nWe offer a wide range of luxurious spa treatments designed specifically for children. From mini manicures, pedicures & facials. We create an environment that allows children to unwind and enjoy their experience to the fullest.\n\nWe also offer a variety of interactive activities and games designed to keep children entertained throughout the party.\n\nIf you have something extra special in mind for your occasion let us know so we can add the finishing touches. We would love to hear from you and help you create unforgettable memories.\n\nFor a quicker response, send us a message on WhatsApp.\n\nParty duration are typically 2 hours.",
       packages: [
         {
           name: "Luxury Spa Party-(minimum of 4 children)Suitable for 5 yrs+",
@@ -277,6 +251,32 @@ const services = [
             "Paint brush",
             "Paint",
           ],
+        },
+      ],
+    },
+  },
+  {
+    title: "PROP HIRE",
+    desc: "We have a wide range of items available for hire to add the finishing touches to your special day. Please contact us for more information regarding your chosen theme.",
+    img: "/PROP.jpg",
+    icon: Heart,
+    detailedInfo: {
+      packages: [
+        {
+          name: "Luxury Dome Hire Only (Without Decorations)",
+          price: "From £150",
+        },
+        {
+          name: "Luxury Dome Hire Only (With Decorations)",
+          price: "From £350",
+        },
+        {
+          name: "Drinks Ladder (Including 27 champagne glasses)",
+          price: "From £60",
+        },
+        {
+          name: "9 Buffet Risers (Including champagne glasses)",
+          price: "From £75",
         },
       ],
     },
@@ -407,14 +407,14 @@ export default function Services() {
               transition={{ duration: 0.4, delay: 0.1 }}
             >
               {/* Service Icon */}
-              <motion.div
+              {/* <motion.div
                 className="inline-flex items-center justify-center w-16 h-16 bg-gray-50 rounded-2xl mb-4"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
               >
                 <selectedService.icon className="w-8 h-8 text-gray-700" />
-              </motion.div>
+              </motion.div> */}
 
               <motion.h2
                 className="text-2xl font-semibold text-gray-900 mb-2"
@@ -465,7 +465,7 @@ export default function Services() {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
                 >
-                  <p className="text-gray-600 leading-relaxed text-base max-w-2xl mx-auto">
+                  <p className="text-gray-600 leading-relaxed text-base max-w-2xl mx-auto whitespace-pre-line">
                     {selectedService.detailedInfo.description}
                   </p>
                 </motion.div>
@@ -506,7 +506,7 @@ export default function Services() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-6 text-center">
                       {selectedService.title === "LUXURY PICNICS & KIDS PARTIES"
                         ? "Packages & Pricing"
-                        : "Date Night Packages"}
+                        : " "}
                     </h3>
                     <div className="space-y-4">
                       {selectedService.detailedInfo.packages.map((pkg, idx) => (

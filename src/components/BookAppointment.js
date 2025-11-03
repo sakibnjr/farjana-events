@@ -81,9 +81,9 @@ const BookAppointment = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <span className="hidden sm:inline">
-                Call Us: +44 07487 414961
+                Contact Us: +044 07487 414961
               </span>
-              <span className="sm:hidden">Call: +44 07487 414961</span>
+              <span className="sm:hidden">Call: +044 07487 414961</span>
             </motion.button>
           </motion.div>
         </div>

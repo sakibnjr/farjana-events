@@ -161,14 +161,14 @@ const New = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
         >
-          <Heading text="Giving You A Luxury Experience" border={true} />
+          <Heading text="Giving You A Luxury Experience" border={false} />
         </motion.div>
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
         >
-          <Heading text="&" border={true} />
+          <Heading text="&" border={false} />
         </motion.div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -177,7 +177,7 @@ const New = () => {
         >
           <Heading
             text="Making Your Special Occasion Unforgettable"
-            border={true}
+            border={false}
           />
         </motion.div>
 
@@ -431,7 +431,7 @@ const New = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Call Us: +044 07487 414961
+                  Contact Us: +044 07487 414961
                 </motion.button>
               </motion.div>
             </div>
