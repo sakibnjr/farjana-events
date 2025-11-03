@@ -171,7 +171,7 @@ const services = [
   {
     title: "PROP HIRE",
     desc: "We have a wide range of items available for hire to add the finishing touches to your special day. Please contact us for more information regarding your chosen theme.",
-    img: "/DOMEE.jpg",
+    img: "/PROP.jpg",
     icon: Heart,
     detailedInfo: {
       packages: [
@@ -197,7 +197,7 @@ const services = [
   {
     title: "Pamper Us Too",
     desc: "Thinking of throwing a party? Why not choose from one of our packages for the ultimate kid's pamper party?",
-    img: "/DOMEE.jpg",
+    img: "/PAMPER.jpg",
     icon: Heart,
     detailedInfo: {
       description:
