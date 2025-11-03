@@ -310,9 +310,9 @@ export default function Services() {
           >
             <Heading text="Services We Offer" border={false} />
             <p className="text-lg md:text-xl max-w-2xl mx-auto">
-              Discover a range of our premium services. <br />
+              Discover a range of our premium services <br />
               <span className="uppercase">We can also create in</span>
-              <br /> your own package best suited to your needs.
+              <br /> your own package best suited to your needs
             </p>
           </motion.div>
 

@@ -46,7 +46,7 @@ const New = () => {
         >
           <Link
             href="/"
-            className="font-bold text-xl md:text-2xl lg:text-4xl tracking-wider font-cfont"
+            className="font-bold text-xl md:text-2xl lg:text-4xl tracking-wider font-tnr uppercase"
           >
             faraja events
           </Link>
