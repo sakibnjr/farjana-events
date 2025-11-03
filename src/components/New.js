@@ -20,9 +20,9 @@ const New = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        {/* Left: Logo - Hidden on mobile */}
+        {/* Left: Logo - Smaller on mobile, normal on desktop */}
         <motion.div
-          className="hidden md:block flex-shrink-0 z-20"
+          className="flex-shrink-0 z-20 flex items-center"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -31,22 +31,24 @@ const New = () => {
           <Image
             src="/logo.png"
             alt="Faraja Events"
-            width={110}
-            height={110}
-            className="size-auto"
+            width={60}
+            height={60}
+            priority
+            unoptimized
+            className="w-[60px] h-[60px] md:w-[110px] md:h-[110px] object-contain"
           />
         </motion.div>
 
-        {/* Brand Name - Left on mobile, Center on desktop */}
+        {/* Brand Name - Center on mobile and desktop */}
         <motion.div
-          className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-20"
+          className="absolute left-1/2 transform -translate-x-1/2 z-20"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Link
             href="/"
-            className="font-bold text-xl md:text-2xl lg:text-4xl tracking-wider font-tnr uppercase"
+            className="font-bold text-sm md:text-2xl lg:text-4xl tracking-wider font-tnr uppercase"
           >
             faraja events
           </Link>
