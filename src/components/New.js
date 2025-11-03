@@ -193,21 +193,21 @@ const New = () => {
         </motion.button>
 
         {/* hero section - table setup image */}
-        <div className="relative flex flex-col lg:flex-row w-full h-auto lg:h-[80vh]">
+        <div className="relative flex w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] mt-8">
           {/* Left Section — Event Setup Image */}
-          <div className="hidden lg:block w-full lg:w-[60%] h-[40vh] sm:h-[50vh] lg:h-full bg-white relative">
+          <div className="w-[40%] lg:w-[60%] h-full bg-white relative">
             <Image
               src="/heroLeft.jpg"
               alt="Event Setup"
               fill
               className="object-cover"
               priority
-              sizes="(max-width: 1024px) 100vw, 60vw"
+              sizes="(max-width: 1024px) 40vw, 60vw"
             />
           </div>
 
           {/* Right Section — Image with Overlay Form */}
-          <div className="relative w-full lg:w-[40%] h-[60vh] sm:h-[70vh] lg:h-full">
+          <div className="relative w-[60%] lg:w-[40%] h-full">
             {/* Background Image */}
             <Image
               src="/heroRight.png"
@@ -215,86 +215,86 @@ const New = () => {
               fill
               className="object-cover"
               priority
-              sizes="(max-width: 1024px) 100vw, 40vw"
+              sizes="(max-width: 1024px) 60vw, 40vw"
             />
 
             {/* Form Overlay Content */}
-            <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-8 text-white">
+            <div className="absolute inset-0 flex items-center justify-center p-3 sm:p-4 lg:p-8 text-white">
               <div className="w-full max-w-sm">
-                <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3 text-white">
+                <h1 className="text-base sm:text-xl lg:text-3xl font-bold mb-1 sm:mb-2 lg:mb-3 text-white">
                   Get a Free Quote Today
                 </h1>
-                <p className="text-xs sm:text-sm mb-4 sm:mb-6 text-white opacity-90">
+                <p className="text-[10px] sm:text-xs lg:text-sm mb-2 sm:mb-4 lg:mb-6 text-white opacity-90">
                   Please fill in the form for a personalised quote tailored to
                   your event
                 </p>
 
-                <form className="space-y-3 sm:space-y-4">
+                <form className="space-y-2 sm:space-y-3 lg:space-y-4">
                   <div>
                     <label
                       htmlFor="fullName"
-                      className="block text-start text-xs sm:text-sm font-medium mb-1 text-white"
+                      className="block text-start text-[10px] sm:text-xs lg:text-sm font-medium mb-0.5 sm:mb-1 text-white"
                     >
                       Full Name
                     </label>
                     <input
                       type="text"
                       id="fullName"
-                      className="w-full px-2 sm:px-3 py-1.5 sm:py-2 rounded-md text-black bg-white border-0 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm"
+                      className="w-full px-1.5 sm:px-2 lg:px-3 py-1 sm:py-1.5 lg:py-2 rounded-md text-black bg-white border-0 focus:outline-none focus:ring-2 focus:ring-white/50 text-xs sm:text-sm"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-start text-xs sm:text-sm font-medium mb-1 text-white"
+                      className="block text-start text-[10px] sm:text-xs lg:text-sm font-medium mb-0.5 sm:mb-1 text-white"
                     >
                       Email
                     </label>
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-2 sm:px-3 py-1.5 sm:py-2 rounded-md text-black bg-white border-0 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm"
+                      className="w-full px-1.5 sm:px-2 lg:px-3 py-1 sm:py-1.5 lg:py-2 rounded-md text-black bg-white border-0 focus:outline-none focus:ring-2 focus:ring-white/50 text-xs sm:text-sm"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-start text-xs sm:text-sm font-medium mb-1 text-white"
+                      className="block text-start text-[10px] sm:text-xs lg:text-sm font-medium mb-0.5 sm:mb-1 text-white"
                     >
                       Telephone Number
                     </label>
                     <input
                       type="tel"
                       id="phone"
-                      className="w-full px-2 sm:px-3 py-1.5 sm:py-2 rounded-md text-black bg-white border-0 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm"
+                      className="w-full px-1.5 sm:px-2 lg:px-3 py-1 sm:py-1.5 lg:py-2 rounded-md text-black bg-white border-0 focus:outline-none focus:ring-2 focus:ring-white/50 text-xs sm:text-sm"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="eventDetails"
-                      className="block text-start text-xs sm:text-sm font-medium mb-1 text-white"
+                      className="block text-start text-[10px] sm:text-xs lg:text-sm font-medium mb-0.5 sm:mb-1 text-white"
                     >
                       Tell us more about your event
                     </label>
                     <textarea
                       id="eventDetails"
                       rows="2"
-                      className="w-full px-2 sm:px-3 py-1.5 sm:py-2 rounded-md text-black bg-white border-0 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none text-sm"
+                      className="w-full px-1.5 sm:px-2 lg:px-3 py-1 sm:py-1.5 lg:py-2 rounded-md text-black bg-white border-0 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none text-xs sm:text-sm"
                     ></textarea>
                   </div>
 
-                  <div className="flex items-start gap-2 mt-3 sm:mt-4">
+                  <div className="flex items-start gap-1 sm:gap-2 mt-2 sm:mt-3 lg:mt-4">
                     <input
                       type="checkbox"
                       id="terms"
-                      className="mt-0.5 w-3 h-3 sm:w-4 sm:h-4 accent-white"
+                      className="mt-0.5 w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-4 lg:h-4 accent-white"
                     />
                     <label
                       htmlFor="terms"
-                      className="text-xs sm:text-sm text-white"
+                      className="text-[9px] sm:text-xs lg:text-sm text-white"
                     >
                       I agree to the Terms and Conditions
                     </label>
@@ -302,7 +302,7 @@ const New = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-white text-black font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-md mt-4 sm:mt-6 hover:bg-gray-100 transition-colors duration-200 text-sm sm:text-base"
+                    className="w-full bg-white text-black font-medium py-1.5 sm:py-2 lg:py-3 px-3 sm:px-4 lg:px-6 rounded-md mt-2 sm:mt-4 lg:mt-6 hover:bg-gray-100 transition-colors duration-200 text-xs sm:text-sm lg:text-base"
                   >
                     Submit
                   </button>
